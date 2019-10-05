@@ -1,0 +1,8 @@
+CL: fastcraft/installer/m fastcraft/installer/Empty
+CL: fastcraft/launch/Main fastcraft/launch/FastcraftLauncher
+CL: fastcraft/launch/d fastcraft/launch/LaunchInfo
+CL: fastcraft/launch/o fastcraft/launch/LaunchClassLoader
+
+FD: fastcraft/launch/LaunchInfo/a Ljava/util/List; args
+FD: fastcraft/launch/LaunchInfo/b Ljava/lang/String; launchTarget
+FD: fastcraft/launch/LaunchInfo/b Ljava/lang/invoke/MethodHandle; launchHandle
