@@ -1,8 +1,36 @@
 CL: fastcraft/installer/m fastcraft/installer/Empty
-CL: fastcraft/launch/Main fastcraft/launch/FastcraftLauncher
+CL: fastcraft/launch/Main fastcraft/launch/LauncherMain
 CL: fastcraft/launch/d fastcraft/launch/LaunchInfo
 CL: fastcraft/launch/o fastcraft/launch/LaunchClassLoader
+CL: fastcraft/launch/b fastcraft/launch/FastcraftLaunch
+CL: fastcraft/launch/n fastcraft/launch/NativePlatform
+CL: fastcraft/launch/f fastcraft/launch/Library
+CL: fastcraft/launch/g fastcraft/launch/LaunchUtil
+CL: fastcraft/legacy/Tweaker fastcraft/launch/DummyTweaker
+CL: fastcraft/launch/q fastcraft/launch/ILibraryTransformer
+CL: fastcraft/launch/m fastcraft/launch/ForgeVanillaSeparator
 
 FD: fastcraft/launch/LaunchInfo/a Ljava/util/List; args
 FD: fastcraft/launch/LaunchInfo/b Ljava/lang/String; launchTarget
 FD: fastcraft/launch/LaunchInfo/b Ljava/lang/invoke/MethodHandle; launchHandle
+FD: fastcraft/launch/NativePlatform/a Lfastcraft/launch/NativePlatform; UNKNOWN
+FD: fastcraft/launch/NativePlatform/b Lfastcraft/launch/NativePlatform; WINDOWS
+FD: fastcraft/launch/NativePlatform/c Lfastcraft/launch/NativePlatform; LINUX
+FD: fastcraft/launch/NativePlatform/e Lfastcraft/launch/NativePlatform; OSX
+FD: fastcraft/launch/NativePlatform/d Ljava/lang/String; fileExtension
+FD: fastcraft/launch/NativePlatform/f Ljava/lang/String; name
+FD: fastcraft/launch/Library/a Lfastcraft/launch/Library; FORGE
+FD: fastcraft/launch/Library/b Lfastcraft/launch/Library; MISC
+FD: fastcraft/launch/Library/c Lfastcraft/launch/Library; MISSING
+FD: fastcraft/launch/Library/d Lfastcraft/launch/Library; MINECRAFT
+FD: fastcraft/launch/Library/e Lfastcraft/launch/Library; LIBRARY
+FD: fastcraft/launch/Library/f Lfastcraft/launch/Library; FASTCRAFT
+FD: fastcraft/launch/Library/g Ljava/lang/String; name
+FD: fastcraft/launch/LaunchClassLoader/g Ljava/util/List; libraries
+FD: fastcraft/launch/LaunchClassLoader/a Lfastcraft/launch/ILibraryTransformer libraryTransformer
+
+MD: fastcraft/launch/FastcraftLaunch/a([Ljava/lang/String;)Lfastcraft/launch/LaunchInfo; getLaunchInfo
+MD: fastcraft/launch/LaunchClassLoader/a(Lfastcraft/launch/LaunchClassLoader;Ljava/net/URL;Lfastcraft/launch/Library;)V loadLibrary
+MD: fastcraft/launch/LaunchUtil/a(Lfastcraft/launch/LaunchClassLoader;Ljava/net/URL;Lfastcraft/launch/Library;)V registerLibrary
+MD: fastcraft/launch/LaunchUtil/a(Ljava/net/URL;)Ljava/net/URL; expandJarURL
+MD: fastcraft/launch/ILibraryTransformer/a(Lfastcraft/launch/Library;Ljava/lang/String;)Lfastcraft/launch/Library; transformLibrary
